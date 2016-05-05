@@ -15,10 +15,11 @@ import org.testng.annotations.Test;
 			
 			WebDriver driver = new FirefoxDriver();
 			driver.get("http://www.seleniumhq.org/");
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-			driver.findElement(By.xpath("//a[@title='Get Selenium']")).click();
+//			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+//			driver.findElement(By.xpath("//a[@title='Get Selenium']")).click();
 			System.out.println(driver.getTitle());
-			Assert.assertEquals("Downloads", driver.getTitle());
+			Assert.assertEquals(driver.getTitle(),"Selenium - Web Browser Automation");
+		
 			driver.quit();
 		}
 		
